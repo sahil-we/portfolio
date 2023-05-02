@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+  </head>
+  <style>
+    body {
+      text-align: center;
+      background-color: #e1acf4;
+    }
+    button {
+      font-weight: 600;
+      border: solid 2px black;
+      outline: 0;
+      padding: 1rem 4rem;
+      font-size: 1.5rem;
+      letter-spacing: 0.08rem;
+      background-color: white;
+      border-radius: 0.35rem;
+      position: relative;
+      cursor: pointer;
+    }
+    button::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: pink;
+      z-index: -1;
+      border-radius: 0.35rem;
+      border: solid 2px black;
+      transition: all 0.3s ease-in-out;
+    }
+    button:after {
+      border: 0;
+      box-shadow: 0px 0px 0px 2px black;
+      top: 0.5rem;
+      left: 0.5rem;
+    }
+    button:hover {
+      background-color: pink;
+      border: 0;
+    }
+    button:hover::after {
+      background-color: black;
+      box-shadow: none;
+    }
+
+    .theme{
+      width: 156px;
+      height: 54px;
+      font-family: cursive;
+      position: absolute;
+      background-color: #6c62621f;
+      color: white;
+      top: 80px;
+      left: 180px;
+    }
+  </style>
+  <body id="body" onclick="changeColor()">
+    <script>
+      function table() {
+        let a = Number(prompt("enter any number to get table"));
+        for (y = 1; y <= 10; y++) 
+          document.write(a + " x " + y + " = " + a * y + "<br>");
+      }
+
+      function prime_no() {
+        let n = Number(prompt("enter any number to check prime or not"));
+        for (a = 2; a < n; a++) {
+          if (n % a == 0) {
+            alert(n + " is not a prime number");
+            break;
+          }
+        }
+        if (a == n) 
+          alert(n + " is a prime number");
+      }
+
+      function factorial() {
+        let z = Number(prompt("enter any number for factorial")); // yaaha se input ayega
+        let fact = 1; //variable to store factorial
+for(z;z>0;z--){
+    fact = fact * z;
+}
+        alert("factorial of " + z + " is " + fact);
+      }
+
+      function power() {
+        let x = Number(prompt("Enter Number"));
+        let p = Number(prompt("Enter power"));
+        let result = Math.pow(x, p);
+        alert(x + " raised to the power " + p + " is " + result);
+      }
+
+      function factors() {
+        let y = Number(prompt("enter any number to get factors")); // for input
+        for (i = 1; i <= y; i++) 
+          if (y % i == 0) document.write(i + "<br>");
+        }
+
+      function percentage() {
+        let a = Number(prompt("enter your first marks"));
+        let b = Number(prompt("enter your second marks"));
+        let c = Number(prompt("enter your third marks"));
+        let d = Number(prompt("enter your fourth marks"));
+        let e = Number(prompt("enter your five marks"));
+
+        let sum = a + b + c + d + e;
+        let total = 500;
+        alert("Your Percentage is " + (sum / total) * 100 + "%");
+      }
+
+      function area() {
+        let a = Number(prompt("Enter first side"));
+        let b = Number(prompt("Enter second side"));
+        let c = Number(prompt("Enter third side"));
+        let s = (a + b + c) / 2;
+        area = Math.round(Math.sqrt(s * (s - a) * (s - b) * (s - c)));
+        alert("Area of the given triangle is " + area + "sq units");
+      }
+
+      function Calculator() {
+        let num1 = parseFloat(prompt("Enter first number"));
+        operator = prompt("Enter operator ( either +, -, * or / ): ");
+        let num2 = parseFloat(prompt("Enter second number"));
+        let result = 0;
+
+        if (operator == "+") 
+          result = num1 + num2;
+          
+         else if (operator == "-") 
+          result = num1 - num2;
+
+         else if (operator == "*") 
+          result = num1 * num2;
+
+         else if (operator == "/") 
+          result = num1 / num2;
+
+         else 
+          alert("please enter a valid value");
+        
+
+        alert(num1 + operator + num2 + " = " + result);
+      }
+
+      function natural_no() {
+        let a = Number(prompt("Enter Any Number"));
+        let sum = 0;
+        for (i = 1; i <= a; i++) {
+          sum = sum + i;
+        }
+        alert("Sum of first " + a + " natural numbers are " + sum);
+      }
+
+      function LCM(L) {
+        let num1 = Number(prompt("Enter First Number"));
+        let num2 = Number(prompt("Enter Second Number"));
+      }
+
+      function HCF(H) {}
+
+      function changeColor(){
+        document.getElementById("body").style.backgroundColor = document.getElementById("rang").value;
+      }
+    </script>
+    
+    <button name="table" value="table" onclick="table()">Click To Run Table Function</button> <br> <br>
+    <button name="prime" value="prime" onclick="prime_no()">Click To Run Prime No. Function</button> <br> <br>
+    <button name="factorial" value="factorial" onclick="factorial()">Click To Run Factorial Function</button> <br> <br>
+    <button name="power" value="power" onclick="power()">Click To Run Power Function</button> <br> <br>
+    <button name="factors" value="factors" onclick="factors()">Click To Run Factors Function</button> <br> <br>
+    <button name="percentage" value="percentage" onclick="percentage()">Click To Run Percentage Function</button> <br> <br>
+    <button name="area" value="area" onclick="area()">Click To Run Area Function</button> <br> <br>
+    <button name="Calculator" value="Calculator" onclick="Calculator()">Click To Run Simple Calculator</button> <br> <br>
+    <button name="natural_no" value="natural_no" onclick="natural_no()">Click To Get Sum Of Natural No</button> <br> <br>
+    <button name="LCM" value="LCM" onclick="LCM()">Click To Run LCM Function</button> <br> <br>
+    <button name="HCF" value="HCF" onclick="HCF()">Click To Run HCF Function</button> <br> <br>
+    <div class="theme">
+    choose theme
+    <input type="color" id="rang">
+  </div>
+  </body>
+</html>

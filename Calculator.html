@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator By Shivam</title>
+    <style>
+       
+      body {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 0%;
+            padding: 0%;
+      }
+
+      .container {
+        border:3px solid black;
+    margin-top: 120px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #7474ff;
+    width: 20%;
+    height: auto;
+}
+      
+.btn-box{
+margin-top: 10px;
+width: auto;
+
+}
+
+input{
+width: 280px;
+height: 40px;
+border: 2px solid black;
+padding-left:2px ;
+font-size: 25px;
+}
+
+#color-picker{
+  position: relative;
+    top: 68px;
+    left: 102px;
+    width: 100px;
+    height: 50px;
+    
+    
+}
+
+
+    .container button{
+        font-size: 1.7rem;
+        margin: 4px;
+        padding: 1px;
+        width: 20%;
+        height: 8vh;
+        border-radius: 50%;
+        border: 2px solid black;
+        cursor: pointer;
+      }
+      
+    .container button:hover{
+        background-color: #bfbfff;
+      }
+
+.nightmode,.lightmode{
+  height: 80px;
+  width: 80px;
+  background-color:transparent;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  top: 38px;
+  left: 78px;
+  margin: 13px;
+}
+       img{
+        height: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="calculator" onclick="changeColor()">
+      <input type="number" placeholder="Calculator By Sahil" id="output" name="display"/>
+      <div class="btn-box">
+      <div class="row">
+        <button type="button" onclick>C</button>
+        <button type="button">%</button>
+        <button type="button">=</button>
+        <button type="button">del</button>
+      </div>
+
+      <div class="row">
+        <button type="button">7</button>
+        <button type="button">8</button>
+        <button type="button">9</button>
+        <button type="button">/</button>
+      </div>
+
+      <div class="row">
+        <button type="button">4</button>
+        <button type="button">5</button>
+        <button type="button">6</button>
+        <button type="button">-</button>
+      </div>
+
+      <div class="row">
+        <button type="button">1</button>
+        <button type="button">2</button>
+        <button type="button">3</button>
+        <button type="button">+</button>
+      </div>
+
+      <div class="row">
+        <button type="button">0</button>
+        <button type="button">00</button>
+        <button type="button">.</button>
+        <button type="button">*</button>
+    </div>
+      </div>
+    </div>
+
+    <button type="button" class="nightmode" id="night-mode"><img src="https://cdn-icons-png.flaticon.com/512/7645/7645197.png"></button>
+
+    <button type="button" class="lightmode" id="light-mode"><img src="https://cdn-icons-png.flaticon.com/512/2489/2489765.png"></button>
+
+    <input type="color" id="color-picker">
+
+    <script>
+const btn = document.getElementById('night-mode');
+btn.addEventListener('click', function onClick(event) {
+  document.body.style.backgroundColor = 'black';
+}
+)
+
+const btn2 = document.getElementById('light-mode');
+btn2.addEventListener('click', function onClick(event) {
+  document.body.style.backgroundColor = 'white';
+}
+)
+function changeColor() {
+document.getElementById("calculator").style.backgroundColor =  document.getElementById("color-picker").value;
+}
+    </script>
+  </body>
+</html>

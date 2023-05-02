@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOCK</title>
+    <style>
+
+.clock{
+    position: relative;
+    background: url(https://png.pngtree.com/png-clipart/20220708/ourmid/pngtree-clock-face-no-hands-big-roboto-font-new-png-image_5781616.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 78vh;
+    width: 78vh;
+    margin: auto;
+}
+
+.hand{
+position: absolute;
+border-radius: 20px;
+left: 49.4%;
+background-color: black;
+transform-origin: bottom;
+}
+
+#min-hand{
+    height: 27%;
+    top: 23%;
+    width: 0.8%;
+}
+#hr-hand{
+    height: 15%;
+    top: 35%;   
+    width: 1%;
+}
+#sec-hand{
+    height: 33%;
+    top: 17%;
+    width: 0.3%;
+}
+    </style>
+</head>
+<body>
+    <div class="clock">
+<div id="min-hand" class="hand"></div>
+<div id="hr-hand" class="hand"></div>
+<div id="sec-hand" class="hand"></div>
+    </div>
+
+
+    <script>
+setInterval(function() {
+    let d = new Date();
+    let htime = d.getHours();
+    let mtime = d.getMinutes();
+    let stime = d.getSeconds();
+
+    let hrRotation=30*htime + mtime/2;
+    let minRotation=6*mtime;
+    let secRotation=6*stime;
+
+ 
+    document.getElementById("hr-hand").style.transform = `rotate(${hrRotation}deg)`;
+    document.getElementById("min-hand").style.transform = `rotate(${minRotation}deg)`;
+    document.getElementById("sec-hand").style.transform = `rotate(${secRotation}deg)`;
+    
+}, 1000);
+    </script>
+</body>
+</html>

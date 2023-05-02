@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guessing Game</title>
+  <link rel="stylesheet" href="bootstrap2.min.css">
+    <style>
+        body {
+          background: fixed;
+          background-image: url(https://windowscustomization.com/wp-content/uploads/2018/12/Neon-Tanjim.gif);
+          background-image: url(bg-game.gif);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-color: black;
+          color: white;
+  text-align: center;
+}
+
+div{
+  position: fixed;
+  top: 30%;
+  left: 5%;
+}
+
+p {
+  margin: 1.3rem;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+#result {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+ 
+    </style>
+</head>
+<body>
+<div class="container m-5">
+	<h1>Guessing Game</h1>
+	<p>Guess a number between 1 and 100:</p>
+	<input type="text" id="guessInput">
+	<button onclick="checkGuess()" class="btn btn-dark ">Submit</button>
+	<button onclick="Reset()" class="btn btn-dark ">Reset</button>
+	<p id="result"></p>
+</div>
+
+<!-- //javascript -->
+
+    <script>
+
+let secretNumber = Math.floor(Math.random() * 100) + 1;
+let guessCount = 0;
+
+function checkGuess() {
+
+let guess = parseInt(document.getElementById("guessInput").value);
+let result = document.getElementById("result");
+
+  guessCount++;
+
+    if(guess<0 || guess>100){
+        result.textContent = "Please Enter No Between 0-100";
+    }
+    else if (guess === secretNumber) {
+        result.innerHTML = "Congratulations! You guessed the number in " + guessCount + " tries."; //note: inner html and text content works same!
+    } 
+    else if (guess < secretNumber) {
+        result.textContent = "Try again. Your guess is too low.";
+    } 
+    else if (guess > secretNumber){
+        result.textContent = "Try again. Your guess is too high.";
+    }
+
+    else{
+      result.textContent = "Please enter a valid value";
+    }
+
+    result.style.display="block";
+}
+
+function Reset(){
+document.getElementById("guessInput").value="";
+result.style.display="none";
+}
+
+
+    </script>
+</body>
+</html>

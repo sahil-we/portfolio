@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&family=Dancing+Script:wght@600&family=Fugaz+One&family=Raleway:wght@500&family=Ubuntu&display=swap');
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav .logo img{
+    border-radius: 50%;
+    height: 50px;
+}
+
+.icon{
+    max-width: 30%;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.head-link ul{
+  padding: 0;
+  margin: 0;
+}
+
+.head-link ul li{
+  display: inline-block;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.head-link a{
+  text-decoration: none;
+  margin: 0 3rem;
+  color: #6e07f3;
+}
+
+.head-link ul li:hover{
+  transform: translateY(-3px);
+  transition: all 0.1s;
+  text-decoration: underline;
+}
+/* aboutme */
+.about{
+background-color: #f0f0f057;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    margin: 10% 0%;
+
+}
+
+.details{
+   line-height: 2rem; 
+   font-size: 1.4rem; 
+   width: 50%;
+}
+
+.lists{
+  display: flex;
+  line-height: 3rem;
+  font-size: 1.2rem;
+  justify-content: space-evenly;
+}
+
+.box3{
+    display: flex;
+    justify-content: center;
+}
+.box3 img{
+    max-width: 78%;
+    /* margin-right: 3rem; */
+}
+
+
+/* skills */
+
+
+.head h1{
+    height: 100px;
+    text-align: center;
+    background-image: url(underline.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+.box2{
+    display: flex;
+    justify-content: center;
+        perspective: 50em;
+}
+
+.box2 span{
+    background-image: url(https://img.freepik.com/premium-vector/abstract-hexagonal-molecular-structures-technology-background-science-style-medical-design-vector-illustration_41981-2402.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2%;
+    display: inline-block;
+    background-color: white;
+    max-width: 20%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transform: rotateY(359deg) rotateX(0deg);
+    transition: transform 1s;
+}
+ 
+.box2 span:hover {
+            transform: rotateY(0deg) rotateX(0deg);
+            cursor: pointer;
+          }
+
+.box2 img{
+    height: 4rem;
+}
+
+
+
+/* what I do */
+.work-box{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.work-box span img{
+ max-width: 65%;
+}
+
+.work-box .work{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7.5rem;
+  width: 7.5rem;
+  border: 3px solid #6e07f3;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+
+.work-box .work:hover{
+  border-radius: 0;
+  cursor: pointer;
+
+}
+
+.work-box2{
+  text-shadow: 0.01em 0.1em 0 hsl(266deg 94% 49% / 18%);
+  font-family: 'Fugaz One', cursive;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  color: #5e2888e0;
+}
+
+/* project */
+.projects{
+}
+
+.projects span{
+  margin: 0 2rem 2rem 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2%;
+  display: inline-block;
+  height: 220px;
+  width: 20%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: transform 1s;
+}
+
+#span1{
+  background-image: url(https://img.freepik.com/free-vector/illustration-clock_53876-5578.jpg?w=740&t=st=1678293733~exp=1678294333~hmac=4c7d8ad20360dd7f295bd3ce5a7a260a079bc4f9a638e33ac78be02947967500);
+}
+
+#span2{
+  background-image: url(https://img.freepik.com/free-vector/illustration-calculator-machine_53876-5566.jpg?w=740&t=st=1678294204~exp=1678294804~hmac=190c62fc2f26a553458e14c5eb2e17882da1b660d9f76425ad484b9603d3b123);
+}
+
+#span3{
+  background-image: url(https://img.freepik.com/free-vector/search-engine-concept-illustration_114360-286.jpg?w=740&t=st=1678296190~exp=1678296790~hmac=7be3d0394feaecde89cd723afe5f42826c4d29791f64e24bebce34d7fd37cdda);
+}
+
+#span4{
+  background-image: url(https://img.freepik.com/free-vector/online-games-concept_23-2148529348.jpg?w=1060&t=st=1678296128~exp=1678296728~hmac=e937262e2fd8222744ade9a52382505c703d7ba56a889143ebb5735180db1f0e);
+}
+
+#span5{
+  background-image: url(https://img.freepik.com/free-vector/motor-race-flat-composition_1284-21647.jpg?w=996&t=st=1678294391~exp=1678294991~hmac=32e38db0734b013fc32364e250820c1076117df680f46711fa63ab50b699d4e2);
+}
+
+#span6{
+  background-image: url(https://img.freepik.com/free-vector/tiny-students-with-huge-sign-pi-flat-vector-illustration-boy-girl-studying-math-algebra-school-college-holding-ruler-using-laptop-geometric-figures-background-education-concept_74855-23227.jpg?w=900&t=st=1678295978~exp=1678296578~hmac=cfdc6aced6e8ea63851d13bde03cd348b46f0629726b8b889844b45a7467fb15);
+}
+
+
+.projects span:hover{
+cursor: pointer;
+transform: scale(1.3);
+}
+
+.projects span h2{
+  border-bottom: 1px solid black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.projects img{
+  margin: auto;
+  height: 7.5rem;
+}
+
+/* forms */
+
+img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 0;
+  }
+  
+  .card {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 425px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(153, 153, 153, 0.25);
+    padding: 0.75rem;
+  }
+  
+  .card-image {
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 65%;
+    background-image: url(https://wallpapers.com/images/hd/hd-engineering-obj-new-coding-meme-b17pfujbffru6zjn.jpg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    position: relative;
+  }
+  
+  .card-form {
+    padding: 2rem 1rem 0;
+  }
+  
+  .input {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    padding-top: 1.5rem;
+  }
+  .input + .input {
+    margin-top: 1.5rem;
+  }
+  
+  .input-label {
+    color: #8597a3;
+    position: absolute;
+    top: 1.5rem;
+    transition: 0.25s ease;
+  }
+  
+  .input-field {
+    border: 0;
+    z-index: 1;
+    background-color: transparent;
+    border-bottom: 2px solid #eee;
+    font-size: 1.125rem;
+    padding: 0.25rem 0;
+  }
+  .input-field:focus, .input-field:valid {
+    outline: 0;
+    border-bottom-color: #6658d3;
+  }
+  .input-field:focus + .input-label, .input-field:valid + .input-label {
+    color: #6658d3;
+    transform: translateY(-1.5rem);
+  }
+  
+  .action {
+    margin-top: 2rem;
+  }
+  
+  .action-button {
+    font-size: 1.25rem;
+    padding: 1em;
+    width: 100%;
+    font-weight: 500;
+    background-color: #6e07f3;
+    border-radius: 6px;
+    color: #FFF;
+    border: 0;
+  }
+  .action-button:focus {
+    outline: 0;
+  }
+  
+ /* footer */
+ .footer-basic {
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}

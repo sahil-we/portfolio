@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+/* margins */
+.mt-2{
+margin-top: 2rem;
+}
+
+.mt-4{
+    margin-top: 4rem;
+}
+
+.mt-10{
+    margin-top: 10rem;
+}
+
+.text-align{
+    text-align: center;
+}
+
+.m-auto{
+    margin: auto;
+}
+
+/* fonts */
+.font-1{
+    font-family: 'Fugaz One', cursive;
+    font-size: 3rem;
+}
+
+.font-2{
+    font-family: 'Raleway', sans-serif;
+}
+
+.font-3{
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 25px;
+    font-size: 1rem;
+}
+
+.font-4{
+    font-family: 'Dancing Script', cursive;
+}
+
+.font-5{
+    font-family: 'Baloo Paaji 2', cursive;
+}
+
+.font-6{
+    font-family: 'Major Mono Display', monospace;
+    }
+/* font-size */
+.f1-2{
+font-size: 1.2rem;
+}
+
+/* buttons */
+.btn{
+    border-radius: 5%;
+    border: 2px solid #6e07f3;
+    padding: 10px;
+    background-color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.btn-hover:hover{
+    background-color:#6e07f3;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* media queryy */
+@media screen and (max-width: 898px)  {
+    .lists{
+        display: block;
+    }
+
+    .box2 span{
+       font-size: 0.8rem;
+    }
+    .projects span{height:160px;}
+    .projects img{
+        height: 5rem;
+    }
+}
+
+@media screen and (max-width: 680px) {
+   
+   nav a , .btn{
+    font-size: 1rem;
+    padding: 3px;
+   }
+
+   .head-link a{
+    margin: 0 1rem ;
+   }
+
+   nav .logo img{
+    height: 30px;
+   }
+
+#heading{
+    font-size: 2rem;
+}
+
+    .details,.lists{
+        margin: 0 10px;
+        font-size: 1rem;
+        width: 100%;
+    }
+    .lists{
+        display: flex;
+    }
+
+    .info-img{
+        display: none;
+    }
+}
+
+.work-box2{
+    font-size:1.3r
+    em ;
+}
+
+@media screen and (max-width:620px) {
+    .box2 span{
+        font-size: 0.5rem;
+        max-width: 19%;
+        height: 100px;
+    }
+
+    .box2 img{
+        height: 2rem;
+    }
+
+    .work-box .work{
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .work-box2{
+        font-size:1rem ;
+    }
+     #project-head{font-size: 1.8rem;}
+     .projects h2{font-size: 1rem;}
+    .projects span{height:120px; width: 8rem;}
+    .projects img{height: 3.7rem;}
+
+    .form{ width: 20rem; margin: auto;   }
+
+}
+
